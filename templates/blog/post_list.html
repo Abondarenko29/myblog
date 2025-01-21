@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Posts</title>
+    </head>
+    <body>
+        <ol>
+        {% for post in posts %}
+            <li>
+                <div style="margin-bottom: 50px;">
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.published_date }}</p>
+                </div>
+            </li>
+        {% endfor %}
+        </ol>
+    </body>
+</html>
