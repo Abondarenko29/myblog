@@ -15,7 +15,8 @@ def post(request, id):
     post = Post.objects.get(id=id)
     context = {
                "post": post,
-               "delta_days": post.published_recently()
+               "delta_days": post.published_recently(),
+               "comments": post.comments.all(),
                }
     return render(request,
                   "blog/post_details.html",
