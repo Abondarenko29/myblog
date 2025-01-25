@@ -1,0 +1,3 @@
+{% for post in author_posts %}
+    <a href="{% url 'post-details' post.id %}">{{ post.title }}, {{ post.published_date }}</a><br>
+{% endfor %}

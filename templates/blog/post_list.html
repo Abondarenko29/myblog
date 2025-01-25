@@ -9,7 +9,7 @@
         {% for post in posts %}
             <li>
                 <div style="margin-bottom: 50px;">
-                    <h2>{{ post.title }}</h2>
+                    <a href="{% url 'post-details' post.id %}">{{ post.title }}</a>
                     <p>{{ post.published_date }}</p>
                 </div>
             </li>
